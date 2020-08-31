@@ -19,6 +19,7 @@ if (!params.has("username")) {
   throw new Error("Ser requiere el username");
 }
 let username = params.get("username");
+console.log(window.location.host + "?username=" + username);
 socket = io(window.location.host + "?username=" + username);
 //Listeners
 socket.on("connect", function () {
